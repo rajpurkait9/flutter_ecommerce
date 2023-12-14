@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:ecommerce/models/login_model.dart';
 import 'package:ecommerce/screens/login_signup/signup_form.dart';
+import 'package:ecommerce/screens/profile/profile_page.dart';
 import 'package:ecommerce/services/network_handler/network_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,11 +21,14 @@ class LoginPageController extends GetxController {
     if (data['message'] == "register") {
       Get.snackbar("Message", "You are not registered yet");
       Get.to(() => SignUp());
+      mobileNoController.clear();
     } else if (data['message'] == "login") {
       NetworkHandler.storeToken(data['token']);
       Get.snackbar("Message", "You are logged in");
+      mobileNoController.clear();
     } else {
       Get.snackbar("Message", data['message']);
+      mobileNoController.clear();
     }
   }
 }

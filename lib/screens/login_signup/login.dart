@@ -48,7 +48,11 @@ class LoginBottomSheet extends StatelessWidget {
                                 hintText: 'Enter phone number '),
                           ),
                           ElevatedButton(
-                              onPressed: con.login, child: const Text("ok"))
+                              onPressed: () {
+                                con.login();
+                                Get.back();
+                              },
+                              child: const Text("ok"))
                         ]));
           },
           child: Container(

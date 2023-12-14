@@ -54,8 +54,13 @@ class HomePageInner extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Column(
-        children: const [
-          Text("Home Page"),
+        children: [
+          Center(
+            child: Text(
+              'Home Page',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
         ],
       ),
     );

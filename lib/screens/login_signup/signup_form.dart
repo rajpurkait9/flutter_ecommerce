@@ -182,9 +182,7 @@ class SignUp extends StatelessWidget {
                 backgroundColor: AppColors.accent,
               ),
               onPressed: () {
-                if (some.validationKey.currentState!.validate()) {
-                  Get.toNamed(Routes.home);
-                }
+                con.register();
               },
               child: Container(
                   alignment: Alignment.center,
