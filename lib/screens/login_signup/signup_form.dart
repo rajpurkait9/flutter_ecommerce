@@ -117,16 +117,21 @@ class SignUp extends StatelessWidget {
             const SizedBox(height: 10),
             Row(
               children: [
-                Checkbox(
-                  value: false,
-                  onChanged: (value) {},
-                ),
+                Obx(() => Checkbox(
+                      value: con.gender.value == "male" ? true : false,
+                      fillColor: MaterialStateProperty.all(AppColors.accent),
+                      onChanged: (value) {
+                        con.gender.value = "male";
+                      },
+                    )),
                 const Text("Male"),
-                Checkbox(
-                  value: true,
-                  fillColor: MaterialStateProperty.all(AppColors.accent),
-                  onChanged: (value) {},
-                ),
+                Obx(() => Checkbox(
+                      value: con.gender.value == "female" ? true : false,
+                      fillColor: MaterialStateProperty.all(AppColors.accent),
+                      onChanged: (value) {
+                        con.gender.value = "female";
+                      },
+                    )),
                 const Text("Female"),
               ],
             ),
@@ -154,12 +159,14 @@ class SignUp extends StatelessWidget {
             const SizedBox(height: 20),
             Row(
               children: [
-                Checkbox(
-                  value: true,
-                  fillColor: MaterialStateColor.resolveWith(
-                      (states) => AppColors.accent),
-                  onChanged: (value) {},
-                ),
+                Obx(() => Checkbox(
+                      value: con.isAgree.value,
+                      fillColor: MaterialStateColor.resolveWith(
+                          (states) => AppColors.accent),
+                      onChanged: (value) {
+                        con.isAgree.value = value!;
+                      },
+                    )),
                 const Text("I agree to the "),
                 TextButton(
                     onPressed: () {},
