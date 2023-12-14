@@ -1,9 +1,7 @@
 import 'package:ecommerce/screens/login_signup/login.dart';
 import 'package:ecommerce/screens/profile/profile_content.dart';
 import 'package:ecommerce/screens/profile/profile_item.dart';
-import 'package:ecommerce/utils/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 class ProfileWithoutLogin extends StatelessWidget {
   const ProfileWithoutLogin({super.key});
@@ -32,7 +30,7 @@ class ProfileWithoutLogin extends StatelessWidget {
               Container(
                 height: containerHeight * .4,
                 width: double.infinity,
-                color: AppColors.greyDark,
+                color: const Color.fromARGB(255, 56, 52, 56),
               ),
               Card(
                   elevation: 10,

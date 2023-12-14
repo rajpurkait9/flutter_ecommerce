@@ -1,5 +1,4 @@
 import 'package:ecommerce/controllers/login_page_controller.dart';
-import 'package:ecommerce/screens/login_signup/signup_form.dart';
 import 'package:ecommerce/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -49,21 +48,10 @@ class LoginBottomSheet extends StatelessWidget {
                                 hintText: 'Enter phone number '),
                           ),
                           ElevatedButton(
-                              onPressed: () {
-                                con.setMobileNo(con.mobileNoController.text);
-                                if (con.mobileNo.value == "9654674687") {
-                                  // con.mobileNoController.clear();
-                                  Get.to(SignUp());
-                                } else {
-                                  Get.snackbar(
-                                      "error", "your number is incorrect");
-                                }
-                              },
-                              child: const Text("ok"))
+                              onPressed: con.login, child: const Text("ok"))
                         ]));
           },
           child: Container(
-            margin: const EdgeInsets.all(10),
             width: Get.width * .3,
             alignment: Alignment.center,
             child: const Text('Login/Sign Up',
