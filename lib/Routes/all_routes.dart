@@ -1,5 +1,5 @@
 import 'package:ecommerce/screens/category_page.dart';
-import 'package:ecommerce/screens/home_page.dart';
+import 'package:ecommerce/screens/home_page/home_page.dart';
 import 'package:ecommerce/screens/login_signup/signup_form.dart';
 import 'package:ecommerce/screens/profile/profile_page.dart';
 import 'package:ecommerce/screens/profile/profile_without_login.dart';

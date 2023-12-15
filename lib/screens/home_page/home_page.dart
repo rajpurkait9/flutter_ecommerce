@@ -2,6 +2,7 @@ import 'package:ecommerce/controllers/home_page_controller.dart';
 import 'package:ecommerce/screens/category_page.dart';
 import 'package:ecommerce/screens/profile/profile_page.dart';
 import 'package:ecommerce/utils/sp_icon.dart';
+import 'package:ecommerce/widgets/card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,9 +18,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(
-        //   title: const Text('My Ecommerce App'),
-        // ),
+        appBar: AppBar(
+          title: const Text('My Ecommerce App'),
+        ),
         body: Obx(() => IndexedStack(
               index: controller.currentIndex.value,
               children: pages,
@@ -52,16 +53,9 @@ class HomePageInner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Column(
-        children: [
-          Center(
-            child: Text(
-              'Home Page',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-        ],
+    return Container(
+      child: const Column(
+        children: [CardWidgets()],
       ),
     );
   }

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:ecommerce/models/register_model.dart';
-import 'package:ecommerce/screens/home_page.dart';
+import 'package:ecommerce/screens/home_page/home_page.dart';
 import 'package:ecommerce/services/network_handler/network_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
